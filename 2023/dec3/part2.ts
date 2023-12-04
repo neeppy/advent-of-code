@@ -4,7 +4,7 @@ const gears = /\*/g;
 const numbers = /\d+/g;
 
 async function part2() {
-    const buffer = await fs.readFile('dec3/part2.input');
+    const buffer = await fs.readFile('dec3/input.txt');
     const lines = buffer.toString('utf-8').split(/\n/);
 
     const allNumbers = lines.map(line => {

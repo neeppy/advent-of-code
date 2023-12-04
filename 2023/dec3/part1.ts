@@ -4,7 +4,7 @@ const isSymbol = /[^.0-9]/;
 const numbers = /\d+/g;
 
 async function part1() {
-    const buffer = await fs.readFile('dec3/part1.input');
+    const buffer = await fs.readFile('dec3/input.txt');
     const lines = buffer.toString('utf-8').split(/\n/);
 
     return lines.reduce((sum, line, currentIndex) => {

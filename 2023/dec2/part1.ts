@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 const drawRegex = /(\d+) (red|green|blue)/g;
 
 async function part1(maximum: Record<string, number>) {
-    const buffer = await fs.readFile('dec2/part1.input');
+    const buffer = await fs.readFile('dec2/input.txt');
     const games = buffer.toString('utf-8').split(/\n/);
 
     games.pop();

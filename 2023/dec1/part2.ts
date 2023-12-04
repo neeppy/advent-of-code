@@ -56,7 +56,7 @@ function getLastSpelledDigit(line: string, indexOffset: number): [string, number
 }
 
 async function part2() {
-    const buffer = await fs.readFile('dec1/part2.input');
+    const buffer = await fs.readFile('dec1/input.txt');
     const lines = buffer.toString('utf-8').split(/\n|\r|\r\n/);
 
     return lines.reduce((acc, line) => {

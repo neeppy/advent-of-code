@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
 async function part1() {
-    const buffer = await fs.readFile('dec1/part1.input');
+    const buffer = await fs.readFile('dec1/input.txt');
     const lines = buffer.toString('utf-8').split(/\n|\r|\r\n/);
 
     return lines.reduce((acc, line) => {
