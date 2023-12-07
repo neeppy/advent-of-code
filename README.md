@@ -22,3 +22,4 @@ Here's a table of content of what you'll find here:
    * [Day 4: Scratchcards](2023/dec4)
    * [Day 5: If You Give A Seed A Fertilizer](2023/dec5)
    * [Day 6: Wait For It](2023/dec6)
+   * [Day 7: Camel Cards](2023/dec7)
