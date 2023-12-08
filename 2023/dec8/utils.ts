@@ -31,7 +31,7 @@ export const input = async (useReal?: boolean) => {
     const day = __dirname.split('/').at(-1).charAt(3);
     const buffer = await readFile(`dec${day}/${useReal ? 'input' : 'example'}.txt`);
 
-    return buffer.toString('utf-8').split(/\n/);
+    return buffer.toString('utf-8').split(/\n/).filter(e => e);
 };
 
 export const arrayOfNumbers = (str: string): number[] => str.split(' ').filter(e => e).map(Number);
