@@ -27,9 +27,9 @@ export const count = (array: any[], callback: (element: any, idx: number) => tru
 export const getKeysByValue = (object: Record<string, any>, value: any) => Object.keys(object).filter(key => object[key] === value);
 export const objectHasValue = <T>(object: Record<string, T>, value: T) => Object.values(object).some(val => val === value);
 export const sum = (nums: number[], startFrom = 0) => nums.reduce((acc, num) => acc + num, startFrom);
-export const sumOf = (
-    array: unknown[],
-    callback: (el: unknown, idx: number) => number,
+export const sumOf = <T>(
+    array: T[],
+    callback: (el: T, idx: number) => number,
     startFrom: number = 0
 ): number => array.reduce<number>((acc, el, idx) => acc + callback(el, idx), startFrom);
 

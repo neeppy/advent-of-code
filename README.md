@@ -24,3 +24,4 @@ Here's a table of content of what you'll find here:
    * [Day 6: Wait For It](2023/dec6)
    * [Day 7: Camel Cards](2023/dec7)
    * [Day 8: Haunted Wasteland](2023/dec8)
+   * [Day 9: Mirage Maintenance](2023/dec9)
