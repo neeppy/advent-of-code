@@ -61,6 +61,17 @@ export const min = (arr: number[]) => {
     return result;
 };
 
+export const max = (arr: number[]) => {
+    let result = -Infinity;
+
+    arr.forEach(value => {
+        if (value >= result)
+            result = value;
+    });
+
+    return result;
+};
+
 export const range = (start: number, end: number, step: number = 1) => {
     const result = [];
 

@@ -25,3 +25,4 @@ Here's a table of content of what you'll find here:
    * [Day 7: Camel Cards](2023/dec7)
    * [Day 8: Haunted Wasteland](2023/dec8)
    * [Day 9: Mirage Maintenance](2023/dec9)
+   * [Day 10: Pipe Maze](2023/dec10)
