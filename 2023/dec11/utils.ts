@@ -1,6 +1,4 @@
-import fs from 'fs';
 import { readFile } from 'fs/promises';
-import readline from 'readline';
 import { Worker } from 'worker_threads';
 
 type Range = [number, number];
@@ -10,7 +8,7 @@ export const lcm2 = (a: number, b: number): number => a * b / gcd2(a, b);
 
 export const lcm = (arr: number[]) => arr.reduce(lcm2);
 
-export const count = (array: any[], callback: (element: any, idx: number) => boolean) => array.reduce((acc, element, idx) => {
+export const count = (array: any[], callback: (element: any, idx: number) => boolean): number => array.reduce((acc, element, idx) => {
     if (callback(element, idx)) return acc + 1;
     else return acc;
 }, 0);
