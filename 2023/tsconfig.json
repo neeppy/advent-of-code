@@ -6,6 +6,7 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
         "esModuleInterop": true,
         "sourceMap": true
     },
