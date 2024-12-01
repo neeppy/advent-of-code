@@ -1,0 +1,11 @@
+{
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "indentWidth": 2
+    }
+  },
+  "imports": {
+    "@std/fs": "jsr:@std/fs@^1.0.6"
+  }
+}
