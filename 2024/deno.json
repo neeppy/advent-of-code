@@ -6,8 +6,9 @@
     }
   },
   "tasks": {
+    "today": "deno run -A mkday.ts",
     "td": "deno run -A $(date '+%b%-d' | tr '[:upper:]' '[:lower:]')/main.ts",
-    "tdb": "deno bench -A $(date '+%b%-d' | tr '[:upper:]' '[:lower:]')/main.ts --"
+    "td-bench": "deno bench -A $(date '+%b%-d' | tr '[:upper:]' '[:lower:]')/main.ts --"
   },
   "imports": {
     "@std/dotenv": "jsr:@std/dotenv@^0.225.2",

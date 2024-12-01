@@ -2,14 +2,10 @@ import { inputByLine } from './utils.ts';
 import { part1 } from './part1.ts';
 import { part2 } from './part2.ts';
 
-async function main() {
-  const lines = await inputByLine();
+const lines = await inputByLine();
 
-  const p1 = await part1(lines);
-  const p2 = await part2(lines);
+const p1 = await part1(lines);
+const p2 = await part2(lines);
 
-  console.log('Part 1:', p1);
-  console.log('Part 2:', p2);
-}
-
-main();
+console.log('Part 1:', p1);
+console.log('Part 2:', p2);

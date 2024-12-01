@@ -15,7 +15,10 @@ Or maybe [Google Sheets](https://sheets.google.com)? We'll see.
 
 Here's a table of content of what you'll find here:
 
-1. [AOC Year 2023](2023) – TypeScript, using `ts-node` to run scripts
+1. [AOC Year 2024](2024) – Deno, using `deno task` to run scripts
+   * [Day 1: Historian Hysteria](2024/dec1)
+
+2. [AOC Year 2023](2023) – TypeScript, using `ts-node` to run scripts
    * [Day 1: Trebuchet?!](2023/dec1)
    * [Day 2: Cube Conundrum](2023/dec2)
    * [Day 3: Gear Ratios](2023/dec3)
