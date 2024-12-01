@@ -1,3 +1,4 @@
+import '@std/dotenv/load';
 import { copy } from '@std/fs';
 
 const day = Deno.args[0] || new Date().getDate();

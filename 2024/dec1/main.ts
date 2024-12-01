@@ -2,14 +2,33 @@ import { inputByLine } from './utils.ts';
 import { part1 } from './part1.ts';
 import { part2 } from './part2.ts';
 
-async function main() {
-  const lines = await inputByLine();
+const lines = await inputByLine(Deno.args[0] === 'dry');
 
-  const p1 = await part1(lines);
-  const p2 = await part2(lines);
+const leftList: number[] = [];
+const rightList: number[] = [];
 
-  console.log('Part 1:', p1);
-  console.log('Part 2:', p2);
+for (const line of lines) {
+  const [left, right] = line.split(/\s+/);
+
+  leftList.push(Number(left));
+  rightList.push(Number(right));
 }
 
-main();
+leftList.sort((a, b) => a - b);
+rightList.sort((a, b) => a - b);
+
+const p1 = await part1(leftList, rightList);
+const p2 = await part2(leftList, rightList);
+
+console.log('Part 1:', p1);
+console.log('Part 2:', p2);
+
+Deno.bench({
+  name: 'Part 1',
+  fn: () => void part1(leftList, rightList),
+});
+
+Deno.bench({
+  name: 'Part 2',
+  fn: () => void part2(leftList, rightList),
+});
