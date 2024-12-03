@@ -1,6 +1,7 @@
 # Day 1: Historian Hysteria
 
-## Part 1
+## Part One
+
 The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.
 
 As each location is checked, they will mark it on their list with a star. They figure the Chief Historian must be in one of the first fifty places they'll look, so in order to save Christmas, you need to help them get fifty stars on their list before Santa takes off on December 25th.
@@ -44,7 +45,8 @@ Your actual left and right lists contain many location IDs. What is the total di
 
 Your puzzle answer was `2285373`.
 
-## Part 2
+## Part Two
+
 Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.
 
 Or are they?
