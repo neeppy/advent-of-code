@@ -1,4 +1,4 @@
-# Day 3 - Red-Nosed Reports
+# Day 2: Red-Nosed Reports
 
 ## Part One
 
