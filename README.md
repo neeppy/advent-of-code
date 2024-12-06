@@ -20,6 +20,7 @@ Here's a table of content of what you'll find here:
    * [Day 2: Red-Nosed Reports](2024/dec2)
    * [Day 3: Mull It Over](2024/dec3)
    * [Day 4: Ceres Search](2024/dec4)
+   * [Day 5: Print Queue](2024/dec5)
 
 2. [AOC Year 2023](2023) – TypeScript, using `ts-node` to run scripts
    * [Day 1: Trebuchet?!](2023/dec1)
