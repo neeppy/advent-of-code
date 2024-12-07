@@ -25,6 +25,16 @@ If so, add the result of the equation to your final answer.
 Example result: `3749`.
 Full input result: `4364915411363`.
 
+### Solution
+
+Create a `totals` array that will hold every intermediary calculation. The initial value will be the first operand.
+On each iteration, pop the last `total` from the `totals` array and add two new elements to it:
+- the result of the **adding** the next operand to the last `total`
+- the result of the **multiplying** the next operand to the last `total`
+
+After the loop, the `totals` array will contain all the possible results of the operands, given the provided list of operators.
+If the `totals` array contains the equation result, we have found a valid equation.
+
 ![image](https://github.com/user-attachments/assets/6c25482f-ee2b-4c89-afc4-668b40fd0c32)
 
 ## Part Two
@@ -36,3 +46,8 @@ Find if any of the equations can be solved using any combination of the operator
 
 Example result: `11387`.
 Full input result: `38322057216320`.
+
+### Solution
+
+This is literally the same algorithm as the first part, but one more operator is added to the operators array.
+The same function is reused.
