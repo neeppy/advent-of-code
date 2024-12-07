@@ -2,3 +2,6 @@
 .idea
 */package-lock.json
 */.env
+**/_debug/*
+!**/_debug/.gitkeep
+**/input.txt

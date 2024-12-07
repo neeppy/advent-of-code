@@ -22,3 +22,33 @@ export const lineOfNumbers = (line: string, separator = /\s+/g): number[] =>
 
 export const intervalValidator = (min: number, max: number) => (x: number) =>
   x >= min && x <= max;
+
+export type Operation = (x: number, y: number) => number;
+
+export function validateOperands(
+  target: number,
+  operands: number[],
+  operations: Operation[],
+) {
+  const totals = [operands[0]];
+
+  for (let i = 1; i < operands.length; i++) {
+    const currentTotalsCount = totals.length;
+
+    for (let j = 0; j < currentTotalsCount; j++) {
+      const total = totals.shift()!;
+
+      for (const operator of operations) {
+        const newTotal = operator(total, operands[i]);
+
+        totals.push(newTotal);
+      }
+    }
+  }
+
+  if (totals.includes(target)) {
+    return target;
+  }
+
+  return 0;
+}
