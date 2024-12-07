@@ -6,7 +6,7 @@ solutions to the [Advent of Code](https://adventofcode.com) problems, along with
 problem details, so you don't have to go searching.
 
 Each day of each year is organised under its own directory and has its own individual
-files (e.g. `2023/dec1/part1.ts`). The setups may be similar each day, but they usually 
+files (e.g. `2024/dec1/part1.ts`). The setups may be similar each day, but they usually 
 evolve day by day (adding new utils, or changing the file structure).
 
 This year (2023) is all written in NodeJS, using TypeScript... As for the others... 
@@ -21,6 +21,8 @@ Here's a table of content of what you'll find here:
    * [Day 3: Mull It Over](2024/dec3)
    * [Day 4: Ceres Search](2024/dec4)
    * [Day 5: Print Queue](2024/dec5)
+   * [Day 6: Guard Gallivant](2024/dec6)
+   * [Day 7: Bridge Repair](2024/dec7)
 
 2. [AOC Year 2023](2023) – TypeScript, using `ts-node` to run scripts
    * [Day 1: Trebuchet?!](2023/dec1)

@@ -1,22 +1,8 @@
-# Day 4: Ceres Search
+# [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)
 
 ## Part One
 
-"Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
-
-As the search for the Chief continues, a small Elf who lives on the station tugs on your shirt; she'd like to know if you could help her with her word search (your puzzle input). She only has to find one word: XMAS.
-
-This word search allows words to be horizontal, vertical, diagonal, written backwards, or even overlapping other words. It's a little unusual, though, as you don't merely need to find one instance of XMAS - you need to find all of them. Here are a few ways XMAS might appear, where irrelevant characters have been replaced with .:
-
-```
-..X...
-.SAMX.
-.A..A.
-XMAS.S
-.X....
-```
-
-The actual word search will be full of letters instead. For example:
+You are given a word search puzzle:
 
 ```
 MMMSXXMASM
@@ -31,30 +17,25 @@ MAMMMXMMMM
 MXMXAXMASX
 ```
 
-In this word search, XMAS occurs a total of 18 times; here's the same word search again, but where letters not involved in any XMAS have been replaced with .:
+- the word `XMAS` can appear in any orientation - horizontal, vertical, or diagonal, written forwards or backwards and even overlapping
 
-```
-....XXMAS.
-.SAMXMS...
-...S..A...
-..A.A.MS.X
-XMASAMX.MM
-X.....XA.A
-S.S.S.S.SS
-.A.A.A.A.A
-..M.M.M.MM
-.X.X.XMASX
-```
+## Part One
 
-Take a look at the little Elf's word search. How many times does XMAS appear?
+Find all the appearances of the word `XMAS` in the puzzle. How many times does it appear?
 
-Your puzzle answer was `2554`.
+Example answer: `18`.
+Full input answer: `2554`.
+
+### Solution
+
+Iterate over the input and whenever an `X` is found, compute 7-character substrings that are centered on the `X` in all directions.
+At best case scenario, a 7-character substring will look like this: `SAMXMAS`.
+After having computed all the substrings, check if the substring starts with `SAMX` or ends with `XMAS`.
+A substring cannot start with `XMAS`, because the `X` is always in the center.
 
 ## Part Two
 
-The Elf looks quizzically at you. Did you misunderstand the assignment?
-
-Looking for the instructions, you flip over the word search to find that this isn't actually an XMAS puzzle; it's an X-MAS puzzle in which you're supposed to find two MAS in the shape of an X. One way to achieve that is like this:
+We actually need to search for the word `MAS`, but overlapping in an `X` shape - like the following:
 
 ```
 M.S
@@ -62,25 +43,12 @@ M.S
 M.S
 ```
 
-Irrelevant characters have again been replaced with . in the above diagram. Within the X, each `MAS` can be written forwards or backwards.
+- the word `MAS` can also be written forwards or backwards
 
-Here's the same example from before, but this time all of the X-MASes have been kept instead:
+Example answer: `9`.
+Full input answer: `1916`.
 
-```
-.M.S......
-..A..MSMS.
-.M.S.MAA..
-..A.ASMSM.
-.M.S.M....
-..........
-S.S.S.S.S.
-.A.A.A.A..
-M.M.M.M.M.
-..........
-```
+### Solution
 
-In this example, an X-MAS appears `9` times.
-
-Flip the word search from the instructions back over to the word search side and try again. How many times does an X-MAS appear?
-
-Your puzzle answer was `1916`.
+The solution is even simpler than the previous one. We just need to compute the diagonal substrings, but not for a length of 7, and not for the letter `X`.
+Instead, we're computing the diagonal substrings for all letters `A`, for a length of 3. If the diagonals are either `SAM` or `MAS`, we count it as a match.
