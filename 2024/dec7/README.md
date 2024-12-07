@@ -25,6 +25,8 @@ If so, add the result of the equation to your final answer.
 Example result: `3749`.
 Full input result: `4364915411363`.
 
+![image](https://github.com/user-attachments/assets/6c25482f-ee2b-4c89-afc4-668b40fd0c32)
+
 ## Part Two
 
 Another operator is added into the mix: `concatenation`. Unlike `+` and `*`, concatenation will stick the two numbers together.
