@@ -38,6 +38,8 @@ Full input answer: `1263`.
 
 ## Solution
 
+![image](https://github.com/user-attachments/assets/4cfdcd41-50ef-4644-b9b5-864e0656c144)
+
 The same solution applies to both parts.
 
 For ease of implementation, the antennas are parsed into a `Record<string, Location[]>`, where a Location is a 2D vector of `[row, column]`.
@@ -58,3 +60,6 @@ The `generateAntiNodes` is a generator function which does the following in orde
 Now, the difference between the two parts is only in the way we call the `generateAntiNodes` function.
 In the first part, we call it using a `[1, 1]` as the magnitude bounds. This ensures that we only generate the first antinode.
 In the second part, we call it using the `[0, Infinity]` as the magnitude bounds. This ensures that we generate all the antinodes, starting with the antenna pairs.
+
+![image](https://github.com/user-attachments/assets/b93b210a-1bcc-4907-b02f-32ab88d031f1)
+
