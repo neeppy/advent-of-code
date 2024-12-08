@@ -23,6 +23,7 @@ Here's a table of content of what you'll find here:
    * [Day 5: Print Queue](2024/dec5)
    * [Day 6: Guard Gallivant](2024/dec6)
    * [Day 7: Bridge Repair](2024/dec7)
+   * [Day 8: Resonant Collinearity](2024/dec8)
 
 2. [AOC Year 2023](2023) – TypeScript, using `ts-node` to run scripts
    * [Day 1: Trebuchet?!](2023/dec1)
