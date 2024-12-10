@@ -63,3 +63,6 @@ type Node = {
 ```
 
 If any of the four directions is `undefined`, that means that the node cannot be traversed to **OR** the path is blocked somewhere further down the map.
+
+![image](https://github.com/user-attachments/assets/c4a8d9cb-9642-407a-83f4-2d68854f1a3e)
+
