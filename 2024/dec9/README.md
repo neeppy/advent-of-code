@@ -44,3 +44,6 @@ After that, the problem becomes quite simple. For each file (starting from the e
 If the free space can contain the entire file, we move it there and update the pointers with the new starting position of the free space, as well as the remaining size of the free space. We also have to update the free space that comes before the file - to mark the old file location as free.
 
 After one single loop over the files, we've moved all the files to the left, and we can calculate the checksum.
+
+![image](https://github.com/user-attachments/assets/71ecf324-aacf-4644-96ca-aed7b2e6d6da)
+
