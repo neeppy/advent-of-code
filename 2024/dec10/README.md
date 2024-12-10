@@ -1,4 +1,4 @@
-## Day X
+## Day 10: Hoof It
 
 This is the template directory for the day X of Advent of Code 2023. This contains boilerplate code for the solutions.
 
