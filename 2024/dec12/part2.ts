@@ -61,8 +61,7 @@ function parseRegion(
 
 export function part2(lines: string[]) {
   const visited: Record<string, true> = {};
-
-  let totalFencePrice = 0;
+  const regions: Region[] = [];
 
   for (let i = 0; i < lines.length; i++) {
     for (let j = 0; j < lines[i].length; j++) {
@@ -71,15 +70,70 @@ export function part2(lines: string[]) {
       const regionType = lines[i][j];
 
       const region = parseRegion(lines, regionType, i, j)!;
-      Object.assign(visited, region.visited);
+      regions.push(region);
 
+      Object.assign(visited, region.visited);
+    }
+  }
+
+  let totalFencePrice = 0;
+
+  for (const region of regions) {
+    const visitedByRow: Record<string, number[]> = {};
+    const visitedByCol: Record<string, number[]> = {};
+
+    if (Object.keys(region.visited).length === 1) {
+      totalFencePrice += region.area * 4;
+      continue;
+    }
+
+    for (const location in region.visited) {
+      const [row, col] = location.split(',').map(Number);
+
+      visitedByRow[row] ??= [];
+      visitedByCol[col] ??= [];
+
+      visitedByRow[row].push(col);
+      visitedByCol[col].push(row);
+    }
+
+    for (const row in visitedByRow) {
+      visitedByRow[row] = [
+        Math.min(...visitedByRow[row]),
+        Math.max(...visitedByRow[row]),
+      ];
+    }
+
+    for (const col in visitedByCol) {
+      visitedByCol[col] = [
+        Math.min(...visitedByCol[col]),
+        Math.max(...visitedByCol[col]),
+      ];
+    }
+
+    let sides = 0;
+
+    for (let i = 0; i < lines.length; i++) {
+      if (!visitedByRow[i]) continue;
+
+      if (visitedByRow[i][0] !== visitedByRow[i + 1]?.[0]) {
+        sides++;
+      }
+
+      if (visitedByRow[i][1] !== visitedByRow[i + 1]?.[1]) {
+        sides++;
+      }
+    }
+
+    if (region.type === 'F') {
       console.log({
         region: region.type,
-        visited: region.visited,
+        area: region.area,
+        sides,
       });
-
-      totalFencePrice += region.perimeter * region.area;
     }
+
+    totalFencePrice += region.area * sides;
   }
 
   return totalFencePrice;

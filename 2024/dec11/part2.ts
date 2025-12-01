@@ -1,35 +1,60 @@
 type Node = {
   value: string;
+  count: number;
   left?: Node;
   right?: Node;
 };
 
-const appearanceCount: Record<string, number> = {};
+const allNodes: Record<string, Node> = {};
 
-export function part2(arrangement: string[]) {
-  const currentGeneration = arrangement;
+function traverse(from: string, generation = 0) {
+  let left, right;
 
-  for (let generation = 0; generation < 75; generation++) {
-    console.log(`Generation ${generation}:`, currentGeneration.length);
-
-    const currentGenerationSize = currentGeneration.length;
-
-    for (let i = 0; i < currentGenerationSize; i++) {
-      const item = currentGeneration[i];
-
-      appearanceCount[item] ??= 0;
-      appearanceCount[item]++;
-
-      if (item === '0') {
-        currentGeneration[i] = '1';
-      } else if (item.length % 2 === 0) {
-        currentGeneration[i] = item.substring(0, item.length / 2);
-        currentGeneration.push(String(Number(item.substring(item.length / 2))));
-      } else {
-        currentGeneration[i] = String(Number(item) * 2024);
-      }
-    }
+  if (generation >= 25) {
+    return;
   }
 
-  return currentGeneration.length;
+  if (allNodes[from]) {
+    allNodes[from].count += 1 + (allNodes[from].left?.count || 0) +
+      (allNodes[from].right?.count || 0);
+
+    return allNodes[from];
+  }
+
+  if (from === '0') {
+    left = '1';
+  } else if (from.length % 2 === 0) {
+    left = from.substring(0, from.length / 2);
+    right = String(Number(from.substring(from.length / 2)));
+  } else {
+    left = String(Number(from) * 2024);
+  }
+
+  console.log(from, `---${generation}--->`, left, right);
+
+  const leftNode = traverse(left, generation + 1);
+  const rightNode = right ? traverse(right, generation + 1) : undefined;
+
+  allNodes[from] = {
+    value: from,
+    count: 1 + (leftNode?.count || 0) + (rightNode?.count || 0),
+    left: leftNode,
+    right: rightNode,
+  };
+
+  return allNodes[from];
+}
+
+export function part2(arrangement: string[]) {
+  let steps = 0;
+
+  for (const rootNode of arrangement) {
+    const node = traverse(rootNode)!;
+
+    steps += node.count;
+  }
+
+  console.log(allNodes);
+
+  return steps;
 }
