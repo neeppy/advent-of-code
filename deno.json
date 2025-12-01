@@ -1,0 +1,15 @@
+{
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "indentWidth": 2
+    }
+  },
+  "tasks": {
+    "today": "deno run -A mkday.ts"
+  },
+  "imports": {
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.2",
+    "@std/fs": "jsr:@std/fs@^1.0.6"
+  }
+}

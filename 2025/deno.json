@@ -1,0 +1,12 @@
+{
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "indentWidth": 2
+    }
+  },
+  "tasks": {
+    "td": "deno run -A $(date '+%b%-d' | tr '[:upper:]' '[:lower:]')/main.ts",
+    "td-bench": "deno bench -A $(date '+%b%-d' | tr '[:upper:]' '[:lower:]')/main.ts --"
+  }
+}

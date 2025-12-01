@@ -1,7 +1,7 @@
 */node_modules/*
 .idea
 */package-lock.json
-*/.env
+.env
 **/_debug/*
 !**/_debug/.gitkeep
 **/input.txt

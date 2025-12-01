@@ -15,6 +15,9 @@ Or maybe [Google Sheets](https://sheets.google.com)? We'll see.
 
 Here's a table of content of what you'll find here:
 
+1. [AOC Year 2025](2025) – Deno, using `deno task` to run scripts
+   * [Day 1: Secret Entrance](2025/dec1)
+
 1. [AOC Year 2024](2024) – Deno, using `deno task` to run scripts
    * [Day 1: Historian Hysteria](2024/dec1)
    * [Day 2: Red-Nosed Reports](2024/dec2)
