@@ -1,11 +1,6 @@
-## Day X
+## Day 1: Secret Entrance
 
-This is the template directory for the day 1 of Advent of Code 2025. This contains boilerplate code for the solutions.
-
-Run the following command to generate the boilerplate code and files for today:
-```bash
-deno task today
-```
+Puzzle text: [here](https://adventofcode.com/2025/day/1).
 
 ## Part One
 

@@ -12,11 +12,7 @@ deno task today
 Example answer: `123`.
 Full input answer: `456`.
 
-### Solution
-
 ## Part Two
 
 Example answer: `123`.
 Full input answer: `456`.
-
-### Solution
