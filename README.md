@@ -17,6 +17,8 @@ Here's a table of content of what you'll find here:
 
 1. [AOC Year 2025](2025) – Deno, using `deno task` to run scripts
    * [Day 1: Secret Entrance](2025/dec1)
+   * [Day 2: Gift Shop](2025/dec2)
+   * [Day 3: Lobby](2025/dec3)
 
 1. [AOC Year 2024](2024) – Deno, using `deno task` to run scripts
    * [Day 1: Historian Hysteria](2024/dec1)
