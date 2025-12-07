@@ -1,21 +1,21 @@
 {
-    "folders": [
-        {
-            "path": "."
-        },
-        {
-            "path": "2023"
-        },
-        {
-            "path": "2024"
-        },
-        {
-            "path": "2025"
-        }
-    ],
-    "extensions": {
-        "recommendations": [
-            "denoland.vscode-deno"
-        ]
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "2023"
+    },
+    {
+      "path": "2024"
+    },
+    {
+      "path": "2025"
     }
+  ],
+  "extensions": {
+    "recommendations": [
+      "denoland.vscode-deno"
+    ]
+  }
 }

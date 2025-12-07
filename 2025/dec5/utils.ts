@@ -1,4 +1,4 @@
-type Range = [number, number];
+export type Range = [number, number];
 
 export async function inputByLine(useExample?: boolean) {
   const file = useExample ? 'example.txt' : 'input.txt';
@@ -6,7 +6,7 @@ export async function inputByLine(useExample?: boolean) {
 
   const content = await Deno.readTextFile(`dec${day}/${file}`);
 
-  return content.split(/\n/).filter(Boolean);
+  return content.split(/\n/);
 }
 
 export const sum = (nums: number[], startFrom = 0) =>
