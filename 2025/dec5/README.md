@@ -1,4 +1,4 @@
-## Day 5: 
+## Day 5: Cafeteria
 
 Puzzle text: [here](https://adventofcode.com/2025/day/5).
 
