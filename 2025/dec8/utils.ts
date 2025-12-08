@@ -53,3 +53,41 @@ export const splitMap = <T, U, V>(
 
   return [before, after] as const;
 };
+
+export const euclidean = ([xA, yA, zA]: Vector3, [xB, yB, zB]: Vector3) =>
+  Math.sqrt((xA - xB) ** 2 + (yA - yB) ** 2 + (zA - zB) ** 2);
+
+export type Distance = {
+  from: Vector3;
+  to: Vector3;
+  distance: number;
+};
+
+export function computeDistancesMap(boxCoordinates: Vector3[]) {
+  const distances: Distance[] = [];
+
+  for (let i = 0; i < boxCoordinates.length - 1; i++) {
+    for (let j = i + 1; j < boxCoordinates.length; j++) {
+      distances.push({
+        from: boxCoordinates[i],
+        to: boxCoordinates[j],
+        distance: euclidean(boxCoordinates[i], boxCoordinates[j]),
+      });
+    }
+  }
+
+  distances.sort((a, b) => a.distance - b.distance);
+
+  return distances;
+}
+
+export function mergeCircuits(
+  allCircuits: Set<Vector3>[],
+  toMerge: Set<Vector3>[],
+) {
+  const merged = new Set<Vector3>(toMerge.flatMap((circuit) => [...circuit]));
+
+  return allCircuits
+    .filter((circuit) => !toMerge.includes(circuit))
+    .concat([merged]);
+}
